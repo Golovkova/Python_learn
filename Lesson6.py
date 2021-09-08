@@ -18,11 +18,11 @@ class TrafficLight:
             print(f'Светофор переключается \n '
                   f'{TrafficLight.color[i]}')
             if i == 0:
-                sleep(5)
+                sleep(7)
             elif i == 1:
-                sleep(3)
+                sleep(5)
             elif i == 2:
-                sleep(1)
+                sleep(2)
             i += 1
 
 
