@@ -1,0 +1,45 @@
+# Задание №1
+my_list = [5, 2, 3, "weather", {"country": "Russia", "Republic": "Tatarstan", "city": "Elabuga", "position": None}]
+for i in range(len(my_list)):
+    print(f"Тип переменной в списке: {type(my_list[i])}")
+
+# Задание №2
+Value = list(input('Введите данные: ').split())
+for a in range(1, len(Value), 2):
+    Value[a], Value[a - 1] = Value[a - 1], Value[a]
+print(Value)
+
+# Задание №3
+time_of_year_dict = {"1": "Весна", "2": "Лето", "3": "Оснь", "4": "Зима"}
+months_dict = {1: time_of_year_dict.get(4), 2: time_of_year_dict.get(4), 3: time_of_year_dict.get(1),
+               4: time_of_year_dict.get(1), 5: time_of_year_dict.get(1), 6: time_of_year_dict.get(2),
+               7: time_of_year_dict.get(2), 8: time_of_year_dict.get(2), 9: time_of_year_dict.get(3),
+               10: time_of_year_dict.get(3), 11: time_of_year_dict.get(3), 12: time_of_year_dict.get(4)}
+value = months_dict[month_number] if month_number in months_dict else print(f"Сезон к которому относится месяц не найден")
+print(f"\Результат поиска {month_number} is:'{value}'")
+
+# Задание 4
+words = input("Ввести информацию: ").split()
+for i, el in enumerate(words, 1):
+    print(i, el[0:10])
+
+# Задание 5
+my_list = [7, 5, 3, 3, 2]
+Value = int(input("Введите число: "))
+for j in range(Value):
+    add_new = int(input("Добавьте число: "))
+    if add_new in my_list:
+        i = my_list.index(add_new)
+        while (i + 1) <= (len(my_list) - 1) and (my_list[i] == my_list[i + 1]):
+            i += 1
+        my_list.insert(i, add_new)
+        print(f"Updated my_list {my_list}")
+    else:
+        if add_new <= my_list[-1]:
+            my_list.append(add_new)
+            print(f"Updated my_list {my_list}")
+        else:
+            my_list.insert(0, add_new)
+            print(f"Updated my_list {my_list}")
+
+# Задание 6 не выполнено
